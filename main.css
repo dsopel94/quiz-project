@@ -1,6 +1,6 @@
 button {
 	background-color: green;
-	border: 1px solid beige;;
+	border: 1px solid beige;
 	padding: 10px;
 	position: absolute;
 	top: 42%;
@@ -21,7 +21,6 @@ h1, h2 {
 	text-align: center; 
 }
 
-
 .hidden {
 	display: none;
 }
@@ -35,10 +34,18 @@ h1, h2 {
     min-height: 300px;
 }
 
-.question {
-text-align:center;
+.question, .feedback {
+	text-align:center;
 }
 
 .qNum {
 	text-align:right;
+}
+
+.correct {
+	border: 5px solid green;
+}
+
+.incorrect {
+	border: 5px solid red;
 }

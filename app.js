@@ -149,10 +149,13 @@ var handleLogic = function(curQuestion) {
     numCorrect++;
     $('.feedback').html("Legendary! You got it correct.");
     $('.feedback').removeClass('hidden');
-
+	$('.feedback').addClass('correct');
+	$('.feedback').removeClass('incorrect');
   } else {
     $('.feedback').html("That wasn't right. The correct answer was" + " " + questionObj.solution + ".");
  	$('.feedback').removeClass('hidden');
+ 	$('.feedback').addClass('incorrect');
+ 	$('.feedback').removeClass('correct');
   }
   if (curQuestion == 10) {
   	handleEnd();
