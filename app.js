@@ -120,7 +120,7 @@ var generateAnswers = function(curQuestion) {
 var generateQuestion = function(curQuestion) {
   var questionObj = questions[curQuestion];
   var containerHTML = '<div class = "question">' + questionObj.prompt +
-    '</div>' + '<div class = "qNum">Question' + ' ' + curQuestion +   ' of 10</div>';
+    '</div>' + '<div class = "qNum">Question' + ' ' + (curQuestion + 1) +   ' of 10</div>';
   $('.container').html(containerHTML);
 
 
