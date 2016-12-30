@@ -12,7 +12,7 @@ button {
 }
 
 
-body {
+body, .question, .container {
 	background-image: url(http://www.pinnacledrafting.com.au/wp-content/uploads/2015/11/Beige-Background.jpg);
 }
 
@@ -24,4 +24,21 @@ h1, h2 {
 
 .hidden {
 	display: none;
+}
+
+.container {
+	width: 500px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 30px auto 0;
+    background-color: white;
+    min-height: 300px;
+}
+
+.question {
+text-align:center;
+}
+
+.qNum {
+	text-align:right;
 }
