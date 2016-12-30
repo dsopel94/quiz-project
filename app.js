@@ -110,17 +110,17 @@ var generateAnswers = function(curQuestion) {
   var questionObj = questions[curQuestion];
   var questionAnswers = questionObj.answers;
   questionAnswers.forEach(function(element) {
-    $('.container').append('<br><label><input type = "radio"' +
-      'name = "choice" value ="' + element + '">' +
+    $('.container').append('<br><label><input type="radio"' +
+      'name="choice" value="' + element + '">' +
       element + '</br></label>');
   })
-  $('.container').append('<button type = "button" "id = "next" onclick="nextQuestion()">NEXT QUESTION' + '</button>');
+  $('.container').append('<button disabled type="button" id="next" onclick="nextQuestion()">NEXT QUESTION' + '</button>');
 }
 
 var generateQuestion = function(curQuestion) {
   var questionObj = questions[curQuestion];
-  var containerHTML = '<div class = "question">' + questionObj.prompt +
-    '</div>' + '<div class = "qNum">Question' + ' ' + (curQuestion + 1) +   ' of 10</div>';
+  var containerHTML = '<div class="question">' + questionObj.prompt +
+    '</div>' + '<div class="qNum">Question' + ' ' + (curQuestion + 1) +   ' of 10</div>';
   $('.container').html(containerHTML);
 
 
@@ -137,6 +137,12 @@ var init = function() {
   $('.submit').on('click', function() {
     $('.start').addClass('hidden');
     $('.container').removeClass('hidden');
+  })
+  $('#next').on('click', function() {
+    //handle click
+  })
+  $('.container').on('click', 'input[type="radio"]', function() {
+  	$('#next').removeAttr('disabled');
   })
 }
 
