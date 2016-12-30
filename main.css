@@ -38,6 +38,9 @@ h1, h2 {
 	text-align:center;
 }
 
+html {
+	font-family:"Helvetica", "Hiragino Kaku Gothic Pro","Open Sans";
+}
 .qNum {
 	text-align:right;
 }
